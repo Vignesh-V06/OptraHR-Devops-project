@@ -1,7 +1,7 @@
-package com.yourpackage.controller;
+package com.optra.hr.controller;
 
-import com.yourpackage.model.Employee;
-import com.yourpackage.repository.EmployeeRepository;
+import com.optra.hr.model.Employee;
+import com.optra.hr.repository.EmployeeRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -48,5 +48,10 @@ public class EmployeeController {
         final Employee saved = employeeRepository.save(emp);
         return ResponseEntity.ok(saved);
     }
+    @GetMapping("/ping")
+public String ping() {
+    return "pong";
+}
+
 }
 

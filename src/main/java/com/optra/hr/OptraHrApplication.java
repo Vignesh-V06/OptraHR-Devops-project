@@ -6,8 +6,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 @SpringBootApplication
 public class OptraHrApplication {
 
-	public static void main(String[] args) {
-		SpringApplication.run(OptraHrApplication.class, args);
-	}
-
+    public static void main(String[] args) {
+        SpringApplication.run(OptraHrApplication.class, args);
+    }
 }
+

@@ -5,9 +5,9 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 public class HomeController {
-
     @GetMapping("/")
-    public String index() {
-        return "✅ OptraHR is running!";
+    public String home() {
+        return "Welcome to OptraHR API!";
     }
 }
+
