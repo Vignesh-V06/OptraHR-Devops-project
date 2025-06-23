@@ -1,0 +1,45 @@
+version: "3.3"
+
+services:
+  optra-app:
+    build:
+      context: .
+      dockerfile: Dockerfile  # Backend Dockerfile
+    container_name: optra-app
+    ports:
+      - "8082:8082"
+    depends_on:
+      - mysql-db
+    networks:
+      - optra-net
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:mysql://mysql-db:3306/optrahr
+      SPRING_DATASOURCE_USERNAME: root
+      SPRING_DATASOURCE_PASSWORD: root
+
+  frontend:
+    build:
+      context: ./optrahr-frontend  # Ensure this is the correct path
+    container_name: optra-frontend
+    ports:
+      - "3001:3000"
+    depends_on:
+      - optra-app
+    networks:
+      - optra-net
+
+  mysql-db:
+    image: mysql:8.0
+    container_name: mysql-db
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: optrahr
+    ports:
+      - "3307:3306"
+    networks:
+      - optra-net
+
+networks:
+  optra-net:
+    driver: bridge
+
