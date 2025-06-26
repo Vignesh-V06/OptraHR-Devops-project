@@ -1,0 +1,8 @@
+- name: Start Grafana container for monitoring
+  docker_container:
+    name: grafana
+    image: grafana/grafana:latest
+    ports:
+      - "3001:3000"
+    restart_policy: always
+

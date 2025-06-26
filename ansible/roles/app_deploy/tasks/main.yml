@@ -1,0 +1,5 @@
+- name: Run Docker Compose to start the app
+  shell: docker-compose up --build -d
+  args:
+    chdir: /home/vignesh-v/OptraHRProject/
+
