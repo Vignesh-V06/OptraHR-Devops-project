@@ -1,0 +1,7 @@
+- hosts: local
+  become: true
+  roles:
+    - docker_setup
+    - app_deploy
+    - monitoring
+
