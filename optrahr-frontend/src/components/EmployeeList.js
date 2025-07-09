@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { getEmployees, addEmployee, deleteEmployee } from "../api";
 import "./EmployeeList.css";
-import { PieChart, Pie, Cell, Legend, Tooltip,ResponsiveContainer } from "recharts";
+import { PieChart, Pie, Cell, Legend, Tooltip, ResponsiveContainer } from "recharts";
 export default function EmployeeList() {
   const [employees, setEmployees] = useState([]);
   const [form, setForm] = useState({ name: "", department: "", salary: "" });
@@ -32,33 +32,33 @@ export default function EmployeeList() {
     emp.name.toLowerCase().includes(searchTerm.toLowerCase())
   );
   // Define custom colors for chart slices
-const COLORS = ["#0088FE", "#00C49F", "#FFBB28", "#FF8042", "#845EC2"];
+  const COLORS = ["#0088FE", "#00C49F", "#FFBB28", "#FF8042", "#845EC2"];
 
-// Aggregate employee count by department
-const departmentData = Object.values(
-  employees.reduce((acc, emp) => {
-    const dept = emp.department;
-    if (!acc[dept]) acc[dept] = { name: dept, value: 0 };
-    acc[dept].value += 1;
-    return acc;
-  }, {})
-);
+  // Aggregate employee count by department
+  const departmentData = Object.values(
+    employees.reduce((acc, emp) => {
+      const dept = emp.department;
+      if (!acc[dept]) acc[dept] = { name: dept, value: 0 };
+      acc[dept].value += 1;
+      return acc;
+    }, {})
+  );
 
 
   return (
     <div className="container">
       {/* Neon Logo */}
       <div className="neon-header">
-        <h1 className="neon-title">Optra<span className="HR">HR</span></h1>
+        <h1 className="neon-title">Optra<span className="HR">HR</span> Dashboard</h1>
       </div>
       {/* HR Tip Marquee */}
-<div className=" hr-tip-marquee">
-  <div className="marquee-container">
-    <p className="marquee-text">
-      “Train people well enough so they can leave, treat them well enough so they don't want to.” – Richard Branson
-    </p>
-  </div>
-</div>
+      <div className=" hr-tip-marquee">
+        <div className="marquee-container">
+          <p className="marquee-text">
+            “Train people well enough so they can leave, treat them well enough so they don't want to.” – Richard Branson
+          </p>
+        </div>
+      </div>
 
 
       {/* Add Employee */}
@@ -136,31 +136,32 @@ const departmentData = Object.values(
         </ResponsiveContainer>
       </div>
       {/* About Us Section */}
-<div className="card about-section">
-  <h2>About Us</h2>
-  <p>
-    OptraHR is a modern, efficient employee management system designed to simplify HR operations.
-    From hiring to tracking employee performance, our platform makes managing your workforce easier and smarter.
-  </p>
-</div>
+      <div className="card about-section">
+        <h2>About Us</h2>
+        <p>
+          OptraHR is a modern, efficient employee management system designed to simplify HR operations.
+          From hiring to tracking employee performance, our platform makes managing your workforce easier and smarter.
+        </p>
+      </div>
 
-{/* Blog Preview Section */}
-<div className="card blog-section">
-  <h2>Latest HR Insights</h2>
-  <ul>
-    <li><strong>📘 How to Streamline Employee Onboarding</strong><br /><small>Published: June 10, 2025</small></li>
-    <li><strong>💼 5 Ways to Improve Workplace Productivity</strong><br /><small>Published: May 28, 2025</small></li>
-    <li><strong>📊 HR Metrics That Matter in 2025</strong><br /><small>Published: May 15, 2025</small></li>
-  </ul>
-</div>
-{/* Quick Stats */}
-<div className="card stats-section">
-  <h2>Quick Stats</h2>
-  <div className="stats-grid">
-    <div><strong>Total Employees:</strong> {employees.length}</div>
-    <div><strong>Departments:</strong> {new Set(employees.map(e => e.department)).size}</div>
-  </div>
-</div>
+      {/* Blog Preview Section */}
+      <div className="card blog-section">
+        <h2>Latest HR Insights</h2>
+        <ul>
+          <li><strong>📘 How to Streamline Employee Onboarding</strong><br /><small>Published: June 10, 2025</small></li>
+          <li><strong>💼 5 Ways to Improve Workplace Productivity</strong><br /><small>Published: May 28, 2025</small></li>
+          <li><strong>📊 HR Metrics That Matter in 2025</strong><br /><small>Published: May 15, 2025</small></li>
+        </ul>
+      </div>
+      {/* Quick Stats */}
+      <div className="card stats-section">
+        <h2>Quick Stats</h2>
+        <div className="stats-grid">
+          <div><strong>Total Employees:</strong> {employees.length}</div>
+          <br/>
+          <div><strong>Departments:</strong> {new Set(employees.map(e => e.department)).size}</div>
+        </div>
+      </div>
 
     </div>
   );
