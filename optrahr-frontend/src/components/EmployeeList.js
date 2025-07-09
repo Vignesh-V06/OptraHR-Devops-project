@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { getEmployees, addEmployee, deleteEmployee } from "../api";
 import "./EmployeeList.css";
 import { PieChart, Pie, Cell, Legend, Tooltip, ResponsiveContainer } from "recharts";
-export default function EmployeeList() {
+export default function EmployeeList({ onLogout }) {
   const [employees, setEmployees] = useState([]);
   const [form, setForm] = useState({ name: "", department: "", salary: "" });
   const [searchTerm, setSearchTerm] = useState("");
@@ -50,7 +50,11 @@ export default function EmployeeList() {
       {/* Neon Logo */}
       <div className="neon-header">
         <h1 className="neon-title">Optra<span className="HR">HR</span> Dashboard</h1>
+        <div class="logout-container">
+          <button class="logout-btn"  onClick={onLogout}>Logout</button>
+        </div>
       </div>
+
       {/* HR Tip Marquee */}
       <div className=" hr-tip-marquee">
         <div className="marquee-container">

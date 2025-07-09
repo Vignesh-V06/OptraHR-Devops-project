@@ -17,7 +17,29 @@
 .HR {
   color: #ff8059;
 }
+.logout-container {
+  text-align: right;
+  margin-top: -75px;
+}
 
+.logout-btn {
+  background-color: #ff4d4f;
+  color: white;
+  padding: 8px 18px;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  font-size: 0.95rem;
+  box-shadow: 0 4px 6px rgba(255, 77, 79, 0.3);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.logout-btn:hover {
+  background-color: #d9363e;
+  box-shadow: 0 6px 18px rgba(217, 54, 62, 0.4);
+  transform: translateY(-5px);
+}
 /* Remove blur/shadow from card */
 .card {
   background: #ffffff;
