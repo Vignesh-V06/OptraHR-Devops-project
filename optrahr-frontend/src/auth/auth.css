@@ -1,0 +1,104 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap');
+
+.auth-container {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #6c63ff, #7fcbff);
+  font-family: "Segoe UI", sans-serif;
+  padding: 20px;
+}
+
+.auth-card {
+  width: 420px;
+  padding: 40px 30px;
+  background: rgba(255, 255, 255, 0.07);
+  backdrop-filter: blur(20px);
+  border-radius: 20px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
+  color: #fff;
+  text-align: center;
+}
+
+.auth-title {
+  font-size: 28px;
+  font-weight: 600;
+  margin-bottom: 30px;
+  letter-spacing: 0.5px;
+}
+
+.auth-form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.auth-form input {
+  background: rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  border-radius: 12px;
+  padding: 14px 16px;
+  color: #222; /* 🔸 Dark text for better readability */
+  font-size: 15px;
+  outline: none;
+  transition: 0.3s;
+}
+
+.auth-form input::placeholder {
+  color: rgba(100, 100, 100, 0.7); /* Softer placeholder */
+}
+
+.auth-form input:focus {
+  border-color: #a9a6a6;
+  background: rgba(255, 255, 255, 0.3);
+  color: #222; /* Ensure visible on focus */
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.3), 0 0 4px rgba(0, 0, 0, 0.2);
+  transform: scale(1.01);
+}
+
+.auth-btn {
+  padding: 12px;
+  border: none;
+  border-radius: 12px;
+  font-size: 16px;
+  background: linear-gradient(to right, #5b52f5, #61bcf9);
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
+  font-weight: 500;
+}
+
+.auth-btn:hover {
+  background: linear-gradient(to right, #6c63ff, #7fcbff);
+  transform: scale(1.02);
+}
+
+.auth-link {
+  margin-top: 20px;
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.auth-link a {
+  color: #fff;
+  font-weight: 500;
+  text-decoration: underline;
+}
+.auth-link a:hover {
+  color: #6c63ff;
+}
+.auth-card {
+  animation: fadeIn 0.7s ease-out;
+}
+@keyframes fadeIn {
+  from {
+    transform: scale(0.95);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
