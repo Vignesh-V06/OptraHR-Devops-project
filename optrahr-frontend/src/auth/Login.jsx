@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { auth } from "../firebase";
 import { signInWithEmailAndPassword } from "firebase/auth";
-import "./auth.css"; // or Login.css
+import "./auth.css";
 
 const Login = () => {
   const [email, setEmail] = useState("");
@@ -12,7 +12,7 @@ const Login = () => {
     try {
       await signInWithEmailAndPassword(auth, email, password);
     } catch (error) {
-      alert(error.message);
+      alert("Login failed: " + error.message);
     }
   };
 
@@ -33,10 +33,12 @@ const Login = () => {
             value={password}
             onChange={(e) => setPassword(e.target.value)}
           />
-          <button className="auth-btn" onClick={handleLogin}>Login</button>
+          <button className="auth-btn" onClick={handleLogin}>
+            Login
+          </button>
         </div>
         <div className="auth-link">
-          Don't have an account? <Link to="/signup">Sign up</Link>
+          <p>Don't have an account? </p><Link to="/signup">Sign up</Link>
         </div>
       </div>
     </div>

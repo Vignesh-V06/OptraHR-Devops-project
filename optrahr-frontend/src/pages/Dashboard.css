@@ -1,0 +1,123 @@
+.dashboard-container {
+  margin: auto;
+  padding: 24px;
+  font-family: "Segoe UI", sans-serif;
+  background-color: #f9f9fc;
+}
+
+.dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.dashboard-header h2 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #09a6cd;
+}
+
+.dashboard-main {
+  display: grid;
+  gap: 24px;
+}
+
+.dashboard-section {
+  background: #ffffff;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease-in-out;
+}
+
+.dashboard-section:hover {
+  transform: translateY(-3px);
+}
+
+.dashboard-section h3 {
+  margin-bottom: 12px;
+  font-size: 20px;
+  color: #333;
+  border-left: 4px solid #6c63ff;
+  padding-left: 10px;
+}
+
+.primary-btn {
+  background-color: #6c63ff;
+  color: #fff;
+  padding: 10px 18px;
+  border: none;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.primary-btn:hover {
+  background-color: #574b90;
+  transform: translateY(-2px);
+}
+
+.logout-btn {
+  background-color: #ff4d4f;
+  color: white;
+  padding: 8px 18px;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  font-size: 0.95rem;
+  box-shadow: 0 4px 6px rgba(255, 77, 79, 0.3);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.logout-btn:hover {
+  background-color: #d9363e;
+  box-shadow: 0 6px 18px rgba(217, 54, 62, 0.4);
+  transform: translateY(-5px);
+}
+
+
+/* Manager Dashboard*/
+.manager-dashboard-container {
+  padding: 24px;
+  font-family: "Segoe UI", sans-serif;
+  background-color: #f9f9fc;
+}
+
+.manager-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.manager-title {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: #ff8059;
+}
+
+.dashboard-section {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 12px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+}
+
+.dashboard-section h3 {
+  margin-bottom: 12px;
+  color: #333;
+  font-size: 20px;
+  border-left: 4px solid #6c63ff;
+  padding-left: 10px;
+}
+
+.dashboard-section p {
+  font-size: 15px;
+  color: #555;
+  line-height: 1.6;
+}
