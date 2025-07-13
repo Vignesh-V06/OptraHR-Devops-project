@@ -3,6 +3,7 @@ body {
   color: #ffffff;
   min-height: 100vh;
   font-family: 'Poppins', sans-serif;
+  font-size: medium;
 }
 
 .glow-card {

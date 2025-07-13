@@ -43,8 +43,7 @@ export default function EmployeeList({ onLogout }) {
       return acc;
     }, {})
   );
-
-
+  
   return (
     <div className="container">
       {/* Neon Logo */}
