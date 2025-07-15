@@ -1,6 +1,6 @@
 import React from "react";
 import './Dashboard.css';
-
+import LeaveReviewSection from "./LeaveReviewSection";
 
 const ManagerDashboard = ({ onLogout }) => {
   return (
@@ -20,6 +20,7 @@ const ManagerDashboard = ({ onLogout }) => {
         <h2>Attendance Requests</h2>
         <p>View and approve/reject employee attendance requests (Coming Soon)</p>
       </div>
+      <LeaveReviewSection />
 
       <div className="card">
         <h2>Monthly Hiring Trends</h2>
