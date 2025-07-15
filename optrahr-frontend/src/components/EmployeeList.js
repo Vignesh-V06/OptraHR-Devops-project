@@ -2,6 +2,8 @@ import { useEffect, useState } from "react";
 import { getEmployees, addEmployee, deleteEmployee } from "../api";
 import "./EmployeeList.css";
 import { PieChart, Pie, Cell, Legend, Tooltip, ResponsiveContainer } from "recharts";
+import LeaveReviewSection from "../pages/LeaveReviewSection";
+
 export default function EmployeeList({ onLogout }) {
   const [employees, setEmployees] = useState([]);
   const [form, setForm] = useState({ name: "", department: "", salary: "" });
@@ -138,6 +140,7 @@ export default function EmployeeList({ onLogout }) {
           </PieChart>
         </ResponsiveContainer>
       </div>
+      <LeaveReviewSection />
       {/* About Us Section */}
       <div className="card about-section">
         <h2>About Us</h2>
